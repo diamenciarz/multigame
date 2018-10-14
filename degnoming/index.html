@@ -3,20 +3,15 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>JS Drum Kit</title>
+	<title>Degnoming board game randomizer</title>
 	<link rel="stylesheet" href="style.css">
 	<meta charset="utf-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<meta name="description" content=""/>
+	<meta name="description" content="Randomizer for a self developped board game"/>
 	<meta name="author" content="Ostaszewscy"/>
 	<!-- <link rel="icon" href="images/favicon.ico"/> -->
-	<!-- <script src="https://use.fontawesome.com/dbed88824e.js"></script> -->
-	<title>DeGnoming</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<!-- <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800" rel="stylesheet"/> -->
-
-
 </head>
 
 <body>
@@ -24,13 +19,13 @@
 		<div id="title">DeGNOMING</div>
 	</div>
 	<div class="content">
-		<div class="flex-row space-around padding20">
+		<div class="flex-row">
 			<div class="flex-column">
-				<div class="flex-row text-right">
+				<div class="flex-row">
 					<label for="size-horizontal">Horizontal size:</label>
 					<input type="number" id="size-horizontal" class="size-input" />
 				</div>
-				<div class="flex-row text-right">
+				<div class="flex-row">
 					<label for="size-vertical">Vertical size:</label>
 					<input type="number" id="size-vertical" class="size-input" />
 				</div>
@@ -56,78 +51,9 @@
 	
 
 	<script>
-		function arrow() {
-
-			for (var i = 0; i <1000; i++) {
-				var random = Math.ceil(Math.random() * 100);
-				console.log(random);
-			}
-			var length = this.dataset.number;
-			var arrowDirection;
-			var random = Math.ceil(Math.random() * 100);
-			console.log(random)
-			if (length == 1) {
-				if (random <= 25) {
-					arrowDirection = '&#11016;';
-				} else
-					if (random <= 75) {
-						arrowDirection = '&#11014;'
-					} else
-						if (random <= 100) {
-							arrowDirection = '&#11017;';
-						}
-			}
-			if (length == 2) {
-				if (random <= 10) {
-					arrowDirection = '&#10145;';
-				} else
-					if (random <= 30) {
-						arrowDirection = '&#11016;';
-					} else
-						if (random <= 70) {
-							arrowDirection = '&#11014;'
-						} else
-							if (random <= 90) {
-								arrowDirection = '&#11017;';
-							} else
-								if (random <= 100) {
-									arrowDirection = '&#11013;';
-								}
-			}
-			if (length == 3) {
-				if (random <= 2) {
-					arrowDirection = '&#11015;';
-				} else
-					if (random <= 8) {
-						arrowDirection = '&#11018;';
-					} else
-						if (random <= 21) {
-							arrowDirection = '&#10145;';
-						} else
-							if (random <= 36) {
-								arrowDirection = '&#11016;';
-							} else
-								if (random <= 66) {
-									arrowDirection = '&#11014;'
-								} else
-									if (random <= 81) {
-										arrowDirection = '&#11017;';
-									} else
-										if (random <= 94) {
-											arrowDirection = '&#11013;';
-										} else
-											if (random <= 100) {
-												arrowDirection = '&#11019;';
-											}
-			}
-			console.log(arrowDirection);
-			$('.display').html('');
-			$('#result'+ this.dataset.number).html(arrowDirection);
-		}
+		
 	</script>
 
-
-		
 	<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script> -->
 	<!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script> -->
 	<script type="text/javascript" src="index.js"></script>
