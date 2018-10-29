@@ -51,7 +51,8 @@ label {
 	text-align: center;
 	/* margin: 10px;	 */
 }
-#field-button {
+#random-field-button {
+	cursor: pointer;
 	display: flex;
 	height: 60px;
 	width: 160px;
@@ -61,7 +62,7 @@ label {
 	/* margin: 10px 0; */
 	font-size: 1.5em;
 }
-#field-representation {
+#board-representation {
 	display: flex;
 	flex-direction: column;
 	align-content: space-between;

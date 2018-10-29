@@ -58,7 +58,7 @@ let sizeHor = $('#size-horizontal').val();
 let sizeVer = $('#size-vertical').val();
 
 function drawFields() {
-	$('#field-representation').children().remove();
+	$('#board-representation').children().remove();
 	for (let j = 0; j < sizeVer; j++) {
 		let row = $('<div>').addClass('row-with-fields');
 		for (let i = 0; i < sizeHor; i++) {
@@ -66,7 +66,7 @@ function drawFields() {
 			let field = $('<div>').addClass('field').attr('id', letter + '' + i);
 			row.append(field);
 		}
-		$('#field-representation').append(row);
+		$('#board-representation').append(row);
 	}
 }
 
@@ -86,6 +86,15 @@ $('#size-vertical').on('change keyup paste', function() {
 	sizeVer = $(this).val();
 	drawFields();
 })
+
+function getRandomField() {
+	console.log('clicked', sizeHor, sizeVer);
+	var rndVer = Math.ceil(Math.random() * sizeVer);
+	var rndHor = Math.ceil(Math.random() * sizeHor);
+	rndHor = String.fromCharCode(97 + rndHor).toUpperCase();
+	var rndFld = rndHor + rndVer
+	console.log(rndHor, rndVer, rndFld);
+}
 
 $(function () {
 	drawFields();
