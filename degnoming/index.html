@@ -21,28 +21,31 @@
 	<div class="content">
 		<div class="flex-row">
 			<div class="flex-column">
-				<div class="flex-row">
+				<div class="flex-container">
 					<label for="size-horizontal">Horizontal size:</label>
-					<input type="number" id="size-horizontal" class="size-input" />
+					<input type="number" id="size-horizontal" class="size-input" value="1"/>
 				</div>
-				<div class="flex-row">
+				<div class="flex-container">
 					<label for="size-vertical">Vertical size:</label>
-					<input type="number" id="size-vertical" class="size-input" />
+					<input type="number" id="size-vertical" class="size-input" value="1"/>
 				</div>
-				<div class="flex-row">
+				<div class="flex-container">
 					<div id="field-button" class="button rounded">Get random field</div>
 				</div>
 			</div>
 			<div class="flex-column">
+				<div id="vert-distancer"></div>
+			</div>
+			<div class="flex-column flex-col-100proc">
 				<div id="field-representation" class="border-aquamarine"></div>
 			</div>
 		</div>
-		<div class="flex-container">
+		<div class="flex-row">
 			<div id="button1" data-number="1" class="button cadetblue rounded" onclick="arrow.call(this)">I</div>
 			<div id="button2" data-number="2" class="button rounded" onclick="arrow.call(this)">II</div>
 			<div id="button3" data-number="3" class="button aqua rounded" onclick="arrow.call(this)">III</div>
 		</div>
-		<div class="flex-container">
+		<div class="flex-row">
 			<div id="result1" class="button display rounded"></div>
 			<div id="result2" class="button display rounded"></div>
 			<div id="result3" class="button display rounded"></div>

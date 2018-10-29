@@ -12,69 +12,69 @@ body {
 .header {
 	display: block;
 	text-align: center;
-	margin: 10px;
 }
 #title {
 	font-size: 40px;
 	padding-bottom: 20px;
 }
 .flex-column, .flex-row {
-	align-items: center;
 	justify-content: center;
 }
 .flex-column {
 	display: flex;
 	flex-direction: column;
-	margin: 10px;
-	/* padding: 10px; */
+	justify-content: space-between;
+	height: 30vh;
+}
+.flex-col-100proc {
+	width: 100%;
 }
 .flex-row {
 	display: flex;
-	width: 100%;
+	width: 50vw;
 	flex-direction: row;
 	justify-content: space-between;
-	margin: -10px;
+	padding: 10px 0;
 }
-.side-padding {
-	padding: 0 20px;
-}
-/* .space-around {
-	justify-content: space-around;
-} */
-.padding20 {
-	padding: 20px;
+#vert-distancer {
+	width: 30px;
 }
 label {
-	display: inline-block;
+	display: flex;
+	align-items: center;
 	width: 100px;
-	margin: 10px;
 	font-size: 14px;
 }
 .size-input {
 	width: 50px;
 	height: 25px;
-	margin: 10px;
+	text-align: center;
+	/* margin: 10px;	 */
 }
 #field-button {
 	display: flex;
 	height: 60px;
-	width: 180px;
+	width: 160px;
 	align-items: center;
 	justify-content: center;
 	/* background-color: #6cb8ef; */
-	margin: 10px;
+	/* margin: 10px 0; */
 	font-size: 1.5em;
 }
 #field-representation {
-	width: 160px;
-	height: 160px;
-	margin: 10px;
+	width: 100%;
+	height: 100%;
+	/* margin: 10px 0; */
 }
-
+.field {
+	margin: 0;
+	padding: 0;
+	border: 1px solid red;
+	width: 100%;
+}
 .flex-container {
 	display: flex;
-	flex-direction: row;
-	align-content: space-between;
+	justify-content: space-between;
 }
 .button {
 	width: 120px;
@@ -86,7 +86,7 @@ label {
 	justify-content: center;
 	font-size: 3em;
 	color: #fff;
-	margin: 10px;
+	/* margin: 10px; */
 	background-color: #75e09b;
 	box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
 }
@@ -98,7 +98,7 @@ label {
 	flex-direction: row;
 	align-items: center;
 	justify-content: space;
-	margin: 10px;
+	/* margin: 10px; */
 	color: #ddd;
 	font-size: 9em;
 	background-color: #aaa;

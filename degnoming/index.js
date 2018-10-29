@@ -54,6 +54,40 @@ function arrow() {
 	$('#result' + this.dataset.number).html(arrowDirection);
 }
 
+let sizeHor = 1;
+let sizeVer = 1;
+
+function drawFields() {
+	$('#field-representation').children().remove();
+	for (let j = 0; j < sizeVer; j++) {
+		let row = $('<tr>');
+		for (let i = 0; i < sizeHor; i++) {
+			let letter = String.fromCharCode(97 + j).toUpperCase();
+			let field = $('<div>').addClass('field').attr('id', letter + '' + i);
+			row.append(field);
+		}
+		$('#field-representation').append(row);
+	}
+}
+
+$('#size-horizontal').on('change keyup paste', function() {
+	if ($(this).val() < 1) { 
+		$(this).val('1');
+	}
+	console.log($(this).val());
+	sizeHor = $(this).val();
+	drawFields();
+})
+$('#size-vertical').on('change keyup paste', function() {
+	if ($(this).val() < 1) {
+		$(this).val('1');
+	}
+	console.log($(this).val());
+	sizeVer = $(this).val();
+	drawFields();
+})
+
 $(function () {
-	console.log('inside');
+	drawFields();
+	console.log('drawFields');
 })
