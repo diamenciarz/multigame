@@ -80,6 +80,9 @@ label {
 	flex-grow: 1;
 	border: 1px solid red;
 }
+.chosen-one {
+	background-color: #17abab;
+}
 .flex-container {
 	display: flex;
 	justify-content: space-between;
