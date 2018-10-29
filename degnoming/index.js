@@ -54,13 +54,13 @@ function arrow() {
 	$('#result' + this.dataset.number).html(arrowDirection);
 }
 
-let sizeHor = 1;
-let sizeVer = 1;
+let sizeHor = $('#size-horizontal').val();
+let sizeVer = $('#size-vertical').val();
 
 function drawFields() {
 	$('#field-representation').children().remove();
 	for (let j = 0; j < sizeVer; j++) {
-		let row = $('<tr>');
+		let row = $('<div>').addClass('row-with-fields');
 		for (let i = 0; i < sizeHor; i++) {
 			let letter = String.fromCharCode(97 + j).toUpperCase();
 			let field = $('<div>').addClass('field').attr('id', letter + '' + i);
